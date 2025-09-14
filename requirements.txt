@@ -1,0 +1,65 @@
+# Core dependencies
+pymongo==4.5.0
+gridfs==0.1.0
+python-dotenv==1.0.0
+
+# GUI dependencies
+ttkbootstrap==1.10.1
+Pillow==10.0.0
+
+# PDF generation
+reportlab==4.0.4
+qrcode==7.4.2
+
+# Security
+cryptography==41.0.4
+pyotp==2.9.0
+bleach==6.0.0
+bcrypt==4.0.2
+
+# Data processing
+pandas==2.1.0
+openpyxl==3.1.2
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.21.1
+
+# API dependencies
+fastapi==0.103.0
+uvicorn==0.23.2
+pydantic==2.3.0
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib==1.7.4
+
+# Email
+email-validator==2.0.0
+python-multipart==0.0.6
+
+# Monitoring and logging
+python-json-logger==2.0.7
+
+# Testing
+pytest==7.4.2
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Development
+black==23.7.0
+flake8==6.1.0
+mypy==1.5.1
+
+# Internationalization
+babel==2.12.1
+
+# Cloud storage (optional)
+google-cloud-storage==2.10.0
+dropbox==11.36.2
+boto3==1.28.40  # AWS S3
+
+# Charts and analytics
+matplotlib==3.7.2
+seaborn==0.12.2
+
+# Scheduling
+schedule==1.2.0
+APScheduler==3.10.4
