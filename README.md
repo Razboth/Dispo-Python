@@ -201,3 +201,54 @@ For support, email support@example.com or open an issue in the GitHub repository
 ---
 
 **Built with ❤️ by the Dispo-Python Team**
+## 🚀 Quick Start Scripts
+
+### Shell Scripts (Recommended)
+
+The project includes convenient shell scripts for easy execution:
+
+#### Interactive Menu
+```bash
+./run.sh
+```
+This opens an interactive menu with all available options.
+
+#### Direct Commands
+```bash
+./run-gui.sh          # Run GUI application directly
+./run-api.sh [port]   # Run API server (default port: 5000)
+./run-dev.sh          # Run in development mode with debug
+```
+
+#### Command Line Usage
+```bash
+./run.sh gui          # Run GUI
+./run.sh api 8000     # Run API on port 8000
+./run.sh stats        # Show statistics
+./run.sh backup       # Backup database
+./run.sh init         # Initialize database
+./run.sh test         # Run tests
+```
+
+### Makefile Commands
+
+Alternative commands using Make:
+
+```bash
+make install      # Set up virtual environment and install dependencies
+make run          # Run interactive menu
+make gui          # Run GUI application
+make api          # Run API server
+make dev          # Run in development mode
+make test         # Run tests
+make lint         # Run code linting
+make format       # Format code with black
+make clean        # Clean cache files
+make backup       # Backup database
+make init         # Initialize database
+```
+
+### macOS Desktop Launcher
+
+Double-click `Dispo-Python.command` in Finder to launch the application.
+
