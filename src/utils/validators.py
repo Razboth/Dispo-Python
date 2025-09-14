@@ -260,8 +260,14 @@ class DocumentValidator:
     @staticmethod
     def validate_document_number(number: str) -> bool:
         """Validate document number format"""
-        # Format: XXX/YYY/2024 or similar
-        pattern = r'^[A-Z0-9]+\/[A-Z0-9]+\/\d{4}$'
+        # More flexible format: allows various patterns
+        # Examples: 001/SK/2024, INV-2024-001, 2024/01/001, etc.
+        if not number or len(number) < 3:
+            return False
+
+        # Allow alphanumeric characters, slashes, hyphens, dots, and spaces
+        # Must contain at least one number or letter
+        pattern = r'^[A-Za-z0-9][A-Za-z0-9\s\-\/\.]*[A-Za-z0-9]$'
         return bool(re.match(pattern, number))
 
     @staticmethod
@@ -283,7 +289,7 @@ class DocumentValidator:
         # Validate specific fields
         if 'nomor_surat' in data and data['nomor_surat']:
             if not DocumentValidator.validate_document_number(data['nomor_surat']):
-                errors.append("Invalid document number format")
+                errors.append(f"Invalid document number format: '{data['nomor_surat']}'. Use format like: 001/SK/2024, INV-2024-001, or similar")
 
         if 'tanggal_surat' in data and data['tanggal_surat']:
             valid, _ = InputValidator.validate_date(data['tanggal_surat'])
